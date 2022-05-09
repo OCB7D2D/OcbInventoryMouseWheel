@@ -1,0 +1,15 @@
+<configs>
+
+	<setattribute xpath="/controls//*[@controller='Quartz.ItemStack, Quartz']" name="on_scroll">true</setattribute>
+	<setattribute xpath="/controls//*[@controller='Quartz.ItemStack, Quartz']" name="controller">WheelQuartzItemStack, InventoryMouseWheelSMX</setattribute>
+
+	<setattribute xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']" name="on_scroll">true</setattribute>
+	<setattribute xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']" name="controller">WheelItemStack, InventoryMouseWheelSMX</setattribute>
+
+	<setattribute xpath="/controls/smxui_output_item_stack[@controller='ItemStack']" name="on_scroll">true</setattribute>
+	<setattribute xpath="/controls/smxui_output_item_stack[@controller='ItemStack']" name="controller">WheelItemStack, InventoryMouseWheelSMX</setattribute>
+
+	<setattribute xpath="/controls/smxui_preview_item_stack[@controller='ItemStack']" name="on_scroll">true</setattribute>
+	<setattribute xpath="/controls/smxui_preview_item_stack[@controller='ItemStack']" name="controller">WheelItemStack, InventoryMouseWheelSMX</setattribute>
+
+</configs>

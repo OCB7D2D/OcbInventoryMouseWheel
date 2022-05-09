@@ -3,6 +3,22 @@
 public static class WheelItemStack
 {
 
+    public static UIScrollView GetParentScrollView(XUiController ctr)
+    {
+        var parent = ctr.Parent;
+        while (parent != null)
+        {
+            var vp = parent.ViewComponent;
+            if (vp != null && vp.EventOnScroll)
+            {
+                var ui = vp.UiTransform?.GetComponent<UIScrollView>();
+                if (ui != null) return ui;
+            }
+            parent = parent.Parent;
+        }
+        return null;
+    }
+
     public static int TransferItems(int amount,
         ItemStack src, Action<ItemStack> setSrc,
         ItemStack dst, Action<ItemStack> setDst)

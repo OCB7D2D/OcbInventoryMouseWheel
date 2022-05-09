@@ -12,9 +12,9 @@ Simply [download here from GitHub][1] and put into your A20 Mods folder:
 
 ## Changelog
 
-### Version 0.1.0
+### Version 0.0.1
 
-- Initial version
+- Initial test version
 
 ## Compatibility
 
