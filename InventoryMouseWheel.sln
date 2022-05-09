@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryMouseWheel", "InventoryMouseWheel.csproj", "{5EB24F7E-DF9A-4BB5-B212-030AAC6BD56C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EB24F7E-DF9A-4BB5-B212-030AAC6BD56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB24F7E-DF9A-4BB5-B212-030AAC6BD56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB24F7E-DF9A-4BB5-B212-030AAC6BD56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB24F7E-DF9A-4BB5-B212-030AAC6BD56C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A76B1E9-85AC-4512-8BCE-AA59854BC3CC}
+	EndGlobalSection
+EndGlobal

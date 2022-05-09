@@ -1,0 +1,12 @@
+<configs>
+
+	<setattribute xpath="/controls/item_stack" name="on_scroll">true</setattribute>
+	<setattribute xpath="/controls/item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+
+	<setattribute xpath="/controls/backpack_item_stack" name="on_scroll">true</setattribute>
+	<setattribute xpath="/controls/backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+<!--
+	<setattribute xpath="/controls/drag_item_stack/rect" name="on_scroll">true</setattribute>
+	<setattribute xpath="/controls/drag_item_stack/rect" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+-->
+</configs>
