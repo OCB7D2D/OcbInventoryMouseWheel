@@ -12,6 +12,11 @@ Simply [download here from GitHub][1] and put into your A20 Mods folder:
 
 ## Changelog
 
+### Version 0.0.2
+
+- Proper SMX UI attribution
+- Rename compat mod to avoid clash
+
 ### Version 0.0.1
 
 - Initial test version

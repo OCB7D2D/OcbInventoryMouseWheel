@@ -28,6 +28,8 @@ xcopy SmxCompat\Config build\%NAME%\Config\ /S
 xcopy Resources build\%NAME%\Resources\ /S
 xcopy UIAtlases build\%NAME%\UIAtlases\ /S
 
+powershell -Command "(gc -encoding UTF8 build\%NAME%\ModInfo.xml) -replace '\"OcbInventoryMouseWheel\"', '\"OcbInventoryMouseWheelSMX\"' | Out-File -encoding UTF8 build\%NAME%\ModInfo.xml"
+
 cd build
 echo Packaging %NAME%-%VERSION%.zip
 powershell Compress-Archive %NAME% %NAME%-%VERSION%.zip -Force
