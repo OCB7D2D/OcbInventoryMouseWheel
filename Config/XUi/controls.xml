@@ -1,9 +1,22 @@
-<configs>
+<configs patcher-version="1">
 
 	<setattribute xpath="/controls/item_stack" name="on_scroll">true</setattribute>
 	<setattribute xpath="/controls/item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
 
 	<setattribute xpath="/controls/backpack_item_stack" name="on_scroll">true</setattribute>
 	<setattribute xpath="/controls/backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+
+	<modif condition="Darkness Falls Core">
+
+		<setattribute xpath="/controls/df_item_stack" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/df_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+
+		<setattribute xpath="/controls/df_backpack_item_stack" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/df_backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+
+		<setattribute xpath="/controls/df_toolbelt_stack" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/df_toolbelt_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+
+	</modif>
 
 </configs>
