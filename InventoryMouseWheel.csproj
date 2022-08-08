@@ -79,7 +79,6 @@
   <ItemGroup>
     <Compile Include="Harmony\AssemblyInfo.cs" />
     <Compile Include="Harmony\WheelItemStack.cs" />
-    <Compile Include="Harmony\XUiC_WheelQuartzItemStack.cs" />
     <Compile Include="Harmony\XUiC_WheelRequiredItemStack.cs" />
     <Compile Include="Harmony\XUiC_WheelItemStack.cs" />
     <Compile Include="Harmony\InventoryMouseWheel.cs" />

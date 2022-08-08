@@ -19,4 +19,11 @@
 
 	</modif>
 
+	<modelsif condition="Z_Ravenhearst_ResizedBackpack">
+
+		<setattribute xpath="/controls/kh60_backpack_item_stack" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/kh60_backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+
+	</modelsif>
+
 </configs>
