@@ -9,8 +9,8 @@ public class InventoryMouseWheel : IModApi
 
     public void InitMod(Mod mod)
     {
-        Debug.Log("Loading OCB Inventory Mouse Wheel Patch: " + GetType());
-        var harmony = new Harmony(GetType().ToString());
+        Log.Out("OCB Harmony Patch: " + GetType().ToString());
+        Harmony harmony = new Harmony(GetType().ToString());
         harmony.PatchAll(Assembly.GetExecutingAssembly());
     }
 
@@ -32,7 +32,7 @@ public class InventoryMouseWheel : IModApi
             // Find position of mods we depend on
             for (int i = 0; i < __result.Count; i += 1)
             {
-                switch (__result[i].ModInfo.Name.Value)
+                switch (__result[i].Name)
                 {
                     // case "SMXui":
                     case "Z_Ravenhearst_ResizedBackpack":

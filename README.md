@@ -12,6 +12,10 @@ Simply [download here from GitHub][1] and put into your A20 Mods folder:
 
 ## Changelog
 
+### Version 0.2.0
+
+- Update compatibility for 7D2D A21.0(b313)
+
 ### Version 0.1.1
 
 - Add Ravenhearst 8.5 compatibility

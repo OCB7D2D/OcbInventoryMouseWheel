@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xml>
-	<ModInfo>
-		<Name value="OcbInventoryMouseWheel" />
-		<Description value="Use mouse scroll wheel to move inventory items." />
-		<Website value="https://github.com/OCB7D2D/OcbInventoryMouseWheel" />
-		<Author value="ocbMaurice" />
-		<Version value="0.1.1" compat="A20"/>
-	</ModInfo>
+	<Name value="OcbInventoryMouseWheel" />
+	<DisplayName value="OCB Inventory Mouse Wheel QOL Mod" />
+	<Description value="Use mouse scroll wheel to move inventory items." />
+	<Website value="https://github.com/OCB7D2D/OcbInventoryMouseWheel" />
+	<Author value="ocbMaurice" />
+	<Version value="0.2.0" />
 </xml>
