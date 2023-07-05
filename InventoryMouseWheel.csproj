@@ -9,8 +9,8 @@
     <ProjectGuid>{5EB24F7E-DF9A-4BB5-B212-030AAC6BD56C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OcbInventoryWheel</RootNamespace>
-    <AssemblyName>OcbInventoryWheel</AssemblyName>
+    <RootNamespace>InventoryMouseWheel</RootNamespace>
+    <AssemblyName>InventoryMouseWheel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Harmony\AssemblyInfo.cs" />
+    <Compile Include="Harmony\ModXmlPatcher.cs" />
     <Compile Include="Harmony\WheelItemStack.cs" />
     <Compile Include="Harmony\XUiC_WheelRequiredItemStack.cs" />
     <Compile Include="Harmony\XUiC_WheelItemStack.cs" />

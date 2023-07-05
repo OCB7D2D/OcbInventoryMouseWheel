@@ -1,4 +1,4 @@
-<configs patcher-version="1">
+<configs patcher-version="4">
 
 	<setattribute xpath="/controls/item_stack" name="on_scroll">true</setattribute>
 	<setattribute xpath="/controls/item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
@@ -19,7 +19,7 @@
 
 	</modif>
 
-	<modelsif condition="Z_Ravenhearst_ResizedBackpack">
+	<modelsif condition="xpath:/controls/kh60_backpack_item_stack">
 
 		<setattribute xpath="/controls/kh60_backpack_item_stack" name="on_scroll">true</setattribute>
 		<setattribute xpath="/controls/kh60_backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>

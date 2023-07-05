@@ -1,7 +1,6 @@
-using System;
+using HarmonyLib;
 using System.Collections.Generic;
 using System.Reflection;
-using HarmonyLib;
 using UnityEngine;
 
 public class InventoryMouseWheel : IModApi

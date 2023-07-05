@@ -74,7 +74,7 @@ static class ModXmlPatcher
             foreach (string xpath in conditions.Split(','))
             {
                 bool negate = false;
-                List<System.Xml.Linq.XElement> xmlNodeList;
+                List<XElement> xmlNodeList;
                 if (xpath.StartsWith("!"))
                 {
                     negate = true;
