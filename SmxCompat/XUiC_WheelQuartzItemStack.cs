@@ -3,7 +3,7 @@ using Audio;
 using System;
 using UnityEngine;
 
-public class XUiC_WheelQuartzItemStack : Quartz.ItemStack
+public class XUiC_WheelQuartzItemStack : Quartz.XUiC_ItemStack
 {
 
     protected bool IsOver = false;

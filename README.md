@@ -15,6 +15,7 @@ Simply [download here from GitHub][1] and put into your A20 Mods folder:
 ### Version 0.2.1
 
 - Add compatibility for Khaine's Bigger Backpack
+- Add compatibility back for Sirillion's SMX UI
 
 ### Version 0.2.0
 
