@@ -6,7 +6,7 @@
 	<setattribute xpath="/controls/backpack_item_stack" name="on_scroll">true</setattribute>
 	<setattribute xpath="/controls/backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
 
-	<modif condition="Darkness Falls Core">
+	<modif condition="DarknessFallsCore">
 
 		<setattribute xpath="/controls/df_item_stack" name="on_scroll">true</setattribute>
 		<setattribute xpath="/controls/df_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>

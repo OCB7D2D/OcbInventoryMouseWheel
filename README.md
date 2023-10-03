@@ -12,6 +12,10 @@ Simply [download here from GitHub][1] and put into your A20 Mods folder:
 
 ## Changelog
 
+### Version 0.2.2
+
+- Update for Darkness Falls A21 Edition
+
 ### Version 0.2.1
 
 - Add compatibility for Khaine's Bigger Backpack
@@ -40,7 +44,7 @@ Simply [download here from GitHub][1] and put into your A20 Mods folder:
 
 ## Compatibility
 
-Developed initially for version A20(b42), updated through A21.0(b324).
+Developed initially for A20(b42), updated through A21.2(b14).
 
 [1]: https://github.com/OCB7D2D/OcbInventoryMouseWheel/releases
 [2]: https://github.com/OCB7D2D/OcbInventoryMouseWheel/actions/workflows/ci.yml
