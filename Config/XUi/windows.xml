@@ -1,6 +1,4 @@
 <configs>
-
 	<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="on_scroll">true</setattribute>
 	<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="controller">WheelRequiredItemStack, InventoryMouseWheel</setattribute>
-
 </configs>
