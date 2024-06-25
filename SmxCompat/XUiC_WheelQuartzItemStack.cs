@@ -50,7 +50,7 @@ public class XUiC_WheelQuartzItemStack : Quartz.XUiC_ItemStack
         base.OnHovered(_isOver);
     }
 
-    protected override void OnScrolled(float _delta)
+    public override void OnScrolled(float _delta)
     {
         // Check for edge case where we are actually inside another
         // Scrollable View (enforce shift key in that situation)

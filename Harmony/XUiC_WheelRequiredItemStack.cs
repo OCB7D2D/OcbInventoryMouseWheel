@@ -7,15 +7,6 @@ public class XUiC_WheelRequiredItemStack : XUiC_RequiredItemStack
 
     protected bool IsOver = false;
 
-    protected UIScrollView ScrollView = null;
-
-    public override void Init()
-    {
-        base.Init();
-        ScrollView = WheelItemStack
-            .GetParentScrollView(this);
-    }
-
     private ItemStack DnDStack => xui.dragAndDrop.CurrentStack;
 
     private void SetSlot(ItemStack stack) => ItemStack = stack;
@@ -43,22 +34,14 @@ public class XUiC_WheelRequiredItemStack : XUiC_RequiredItemStack
         return amount;
     }
 
-    protected override void OnHovered(bool _isOver)
+    public override void OnHovered(bool _isOver)
     {
         IsOver = _isOver;
         base.OnHovered(_isOver);
     }
 
-    protected override void OnScrolled(float _delta)
+    public override void OnScrolled(float _delta)
     {
-        // Check for edge case where we are actually inside another
-        // Scrollable View (enforce shift key in that situation)
-        if (ScrollView != null && !Input.GetKey(KeyCode.LeftShift))
-        {
-            // Otherwise "bubble" event up
-            ScrollView.Scroll(_delta);
-            return;
-        }
         // Process the item transfer
         if (IsLocked || StackLock)
         {
