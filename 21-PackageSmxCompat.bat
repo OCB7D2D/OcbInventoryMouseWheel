@@ -24,7 +24,7 @@ echo create %VERSION%
 xcopy *.xml build\%NAME%\
 xcopy *.md build\%NAME%\
 xcopy SmxCompat\*.dll build\%NAME%\
-xcopy SmxCompat\Config build\%NAME%\Config\ /S
+xcopy Config build\%NAME%\Config\ /S
 xcopy Resources build\%NAME%\Resources\ /S
 xcopy UIAtlases build\%NAME%\UIAtlases\ /S
 

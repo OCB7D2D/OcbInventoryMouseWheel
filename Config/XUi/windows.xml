@@ -1,4 +1,7 @@
-<configs>
-	<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="on_scroll">true</setattribute>
-	<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="controller">WheelRequiredItemStack, InventoryMouseWheel</setattribute>
+<configs patcher-version="7">
+	<modif condition="xpath:/windows//item_stack[@controller='RequiredItemStack']">
+		<echo log="OcbInventoryMouseWheel: Patching Vanilla required item stack"/>
+		<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="controller">WheelRequiredItemStack, InventoryMouseWheel</setattribute>
+	</modif>
 </configs>

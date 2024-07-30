@@ -1,23 +1,59 @@
-<configs patcher-version="6">
-	<setattribute xpath="/controls/item_stack" name="on_scroll">true</setattribute>
-	<setattribute xpath="/controls/item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+<configs patcher-version="7">
+	<modif condition="xpath:/controls/item_stack">
+		<echo log="OcbInventoryMouseWheel: Patching Vanilla item stack"/>
+		<setattribute xpath="/controls/item_stack" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	</modif>
 
-	<setattribute xpath="/controls/backpack_item_stack" name="on_scroll">true</setattribute>
-	<setattribute xpath="/controls/backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	<modif condition="xpath:/controls/backpack_item_stack">
+		<echo log="OcbInventoryMouseWheel: Patching Vanilla backpack stack"/>
+		<setattribute xpath="/controls/backpack_item_stack" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	</modif>
 
-	<modif condition="DarknessFallsCore">
+	<!-- SMX UI compatibility -->
+	<modif condition="xpath:/controls//*[@controller='Quartz.ItemStack\, Quartz']">
+		<echo log="OcbInventoryMouseWheel: Patching Quartz item stack"/>
+		<setattribute xpath="/controls//*[@controller='Quartz.ItemStack, Quartz']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls//*[@controller='Quartz.ItemStack, Quartz']" name="controller">WheelQuartzItemStack, InventoryMouseWheel</setattribute>
+	</modif>
+	<modif condition="xpath:/controls/smxui_toolbelt_item_stack[@controller='ItemStack']">
+		<echo log="OcbInventoryMouseWheel: Patching SMX toolbelt stack"/>
+		<setattribute xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/smxui_toolbelt_item_stack[@controller='ItemStack']" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	</modif>
+	<modif condition="xpath:/controls/smxui_output_item_stack[@controller='ItemStack']">
+		<echo log="OcbInventoryMouseWheel: Patching SMX output stack"/>
+		<setattribute xpath="/controls/smxui_output_item_stack[@controller='ItemStack']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/smxui_output_item_stack[@controller='ItemStack']" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	</modif>
+	<modif condition="xpath:/controls/smxui_preview_item_stack[@controller='ItemStack']">
+		<echo log="OcbInventoryMouseWheel: Patching SMX preview stack"/>
+		<setattribute xpath="/controls/smxui_preview_item_stack[@controller='ItemStack']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/smxui_preview_item_stack[@controller='ItemStack']" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	</modif>
+
+	<!-- Khaines bigger backpack compatibility -->
+	<modif condition="xpath:/controls/kh60_backpack_item_stack">
+		<echo log="OcbInventoryMouseWheel: Patching Khaine's bigger backpack"/>
+		<setattribute xpath="/controls/kh60_backpack_item_stack" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/kh60_backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	</modif>
+
+	<!-- Darkness falls compatibility -->
+	<modif condition="xpath:/controls/df_item_stack">
+		<echo log="OcbInventoryMouseWheel: Patching DF's item stack"/>
 		<setattribute xpath="/controls/df_item_stack" name="on_scroll">true</setattribute>
 		<setattribute xpath="/controls/df_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
-
+	</modif>
+	<modif condition="xpath:/controls/df_backpack_item_stack">
+		<echo log="OcbInventoryMouseWheel: Patching DF's backpack stack"/>
 		<setattribute xpath="/controls/df_backpack_item_stack" name="on_scroll">true</setattribute>
 		<setattribute xpath="/controls/df_backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
-
+	</modif>
+	<modif condition="xpath:/controls/df_toolbelt_stack">
+		<echo log="OcbInventoryMouseWheel: Patching DF's toolbelt stack"/>
 		<setattribute xpath="/controls/df_toolbelt_stack" name="on_scroll">true</setattribute>
 		<setattribute xpath="/controls/df_toolbelt_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
 	</modif>
-
-	<modelsif condition="xpath:/controls/kh60_backpack_item_stack">
-		<setattribute xpath="/controls/kh60_backpack_item_stack" name="on_scroll">true</setattribute>
-		<setattribute xpath="/controls/kh60_backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
-	</modelsif>
 </configs>

@@ -6,6 +6,22 @@ using UnityEngine;
 public class XUiC_WheelQuartzItemStack : Quartz.XUiC_ItemStack
 {
 
+    public static UIScrollView GetParentScrollView(XUiController ctr)
+    {
+        var parent = ctr.Parent;
+        while (parent != null)
+        {
+            var vp = parent.ViewComponent;
+            if (vp != null && vp.EventOnScroll)
+            {
+                var ui = vp.UiTransform?.GetComponent<UIScrollView>();
+                if (ui != null) return ui;
+            }
+            parent = parent.Parent;
+        }
+        return null;
+    }
+
     protected bool IsOver = false;
 
     protected UIScrollView ScrollView = null;
@@ -13,8 +29,7 @@ public class XUiC_WheelQuartzItemStack : Quartz.XUiC_ItemStack
     public override void Init()
     {
         base.Init();
-        ScrollView = WheelItemStack
-            .GetParentScrollView(this);
+        ScrollView = GetParentScrollView(this);
     }
 
     private ItemStack DnDStack => xui.dragAndDrop.CurrentStack;
@@ -44,7 +59,7 @@ public class XUiC_WheelQuartzItemStack : Quartz.XUiC_ItemStack
         return amount;
     }
 
-    protected override void OnHovered(bool _isOver)
+    public override void OnHovered(bool _isOver)
     {
         IsOver = _isOver;
         base.OnHovered(_isOver);
