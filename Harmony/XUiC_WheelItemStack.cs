@@ -52,6 +52,12 @@ public class XUiC_WheelItemStack : XUiC_ItemStack
         {
             base.OnScrolled(_delta);
         }
+        // Do nothing if the cursor is currently locked
+        // Happens when cursors stay over toolbar when backpack is closed
+        else if (Cursor.lockState != CursorLockMode.None)
+        {
+            base.OnScrolled(_delta);
+        }
         else if (_delta > 0.0)
         {
             TransferItems(
