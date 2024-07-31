@@ -28,6 +28,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.XPath;
@@ -70,9 +71,12 @@ static class ModXmlPatcher
         if (conditions.StartsWith("xpath:"))
         {
             conditions = conditions.Substring(6);
-            foreach (string xpath in conditions.Split(','))
+            // Use negative look-behind to allow comma escape sequence
+            // Still very bad semantics, but better than not allowing it
+            foreach (string rawpath in Regex.Split(conditions, "(?<!\\\\),"))
             {
                 bool negate = false;
+                var xpath = rawpath.Replace("\\,", ",");
                 List<System.Xml.Linq.XElement> xmlNodeList;
                 if (xpath.StartsWith("!"))
                 {
@@ -409,7 +413,7 @@ static class ModXmlPatcher
             if (!string.IsNullOrEmpty(version))
             {
                 // Check if version is too new for us
-                if (int.Parse(version) > 6) return true;
+                if (int.Parse(version) > 7) return true;
             }
             // Call out to static helper function
             __result = PatchXml(_xmlFile, _patchFile,
