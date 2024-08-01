@@ -14,6 +14,10 @@ Only clone or download the repo if you know what you do!
 
 ## Changelog
 
+### Version 0.3.2
+
+- Compatibility with SteelUI
+
 ### Version 0.3.1
 
 - Fix XML-Patcher for V1 compatibility

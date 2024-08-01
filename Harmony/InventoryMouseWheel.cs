@@ -33,6 +33,7 @@ public class InventoryMouseWheel : IModApi
             {
                 switch (__result[i].Name)
                 {
+                    case "SteelUI":
                     case "Khaines60BBM":
                     case "Khaines96BBM":
                     case "Z_Ravenhearst_ResizedBackpack":
