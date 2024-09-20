@@ -1,14 +1,16 @@
 <configs patcher-version="7">
-	<modif condition="xpath:/controls/item_stack">
-		<echo log="OcbInventoryMouseWheel: Patching Vanilla item stack"/>
-		<setattribute xpath="/controls/item_stack" name="on_scroll">true</setattribute>
-		<setattribute xpath="/controls/item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	<!-- Afterlife compatibility -->
+	<modif condition="xpath:/controls//*[@controller='AL.UI.AL_ItemStack\,Afterlife']">
+		<echo log="OcbInventoryMouseWheel: Patching Afterlife item stack"/>
+		<setattribute xpath="/controls//*[@controller='AL.UI.AL_ItemStack,Afterlife']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls//*[@controller='AL.UI.AL_ItemStack,Afterlife']" name="controller">AL_WheelItemStack, InventoryMouseWheel</setattribute>
 	</modif>
 
-	<modif condition="xpath:/controls/backpack_item_stack">
-		<echo log="OcbInventoryMouseWheel: Patching Vanilla backpack stack"/>
-		<setattribute xpath="/controls/backpack_item_stack" name="on_scroll">true</setattribute>
-		<setattribute xpath="/controls/backpack_item_stack" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
+	<!-- Vanilla compatibility -->
+	<modif condition="xpath:/controls/*[@controller='ItemStack']">
+		<echo log="OcbInventoryMouseWheel: Patching Vanilla item stack"/>
+		<setattribute xpath="/controls/*[@controller='ItemStack']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/controls/*[@controller='ItemStack']" name="controller">WheelItemStack, InventoryMouseWheel</setattribute>
 	</modif>
 
 	<!-- SMX UI compatibility -->

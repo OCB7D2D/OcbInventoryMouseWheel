@@ -11,7 +11,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>InventoryMouseWheel</RootNamespace>
     <AssemblyName>InventoryMouseWheel</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -77,9 +77,6 @@
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>$(PATH_7D2D_MANAGED)\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Quartz">
-      <HintPath>..\SMXcore\Quartz.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

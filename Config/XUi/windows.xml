@@ -1,7 +1,12 @@
 <configs patcher-version="7">
-	<modif condition="xpath:/windows//item_stack[@controller='RequiredItemStack']">
+	<modif condition="xpath:/windows//*[@controller='AL.UI.AL_RequiredItemStack\,Afterlife']">
+		<echo log="OcbInventoryMouseWheel: Patching Afterlife required item stack"/>
+		<setattribute xpath="/windows//*[@controller='AL.UI.AL_RequiredItemStack,Afterlife']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/windows//*[@controller='AL.UI.AL_RequiredItemStack,Afterlife']" name="controller">AL_WheelRequiredItemStack, InventoryMouseWheel</setattribute>
+	</modif>
+	<modif condition="xpath:/windows//*[@controller='RequiredItemStack']">
 		<echo log="OcbInventoryMouseWheel: Patching Vanilla required item stack"/>
-		<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="on_scroll">true</setattribute>
-		<setattribute xpath="/windows//item_stack[@controller='RequiredItemStack']" name="controller">WheelRequiredItemStack, InventoryMouseWheel</setattribute>
+		<setattribute xpath="/windows//*[@controller='RequiredItemStack']" name="on_scroll">true</setattribute>
+		<setattribute xpath="/windows//*[@controller='RequiredItemStack']" name="controller">WheelRequiredItemStack, InventoryMouseWheel</setattribute>
 	</modif>
 </configs>

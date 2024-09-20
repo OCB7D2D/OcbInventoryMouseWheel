@@ -14,6 +14,11 @@ Only clone or download the repo if you know what you do!
 
 ## Changelog
 
+### Version 0.3.2
+
+- Enable pressing shift to take 10 items
+- Add compatibility for Afterlife Overhaul
+
 ### Version 0.3.1
 
 - Fix XML-Patcher for V1 compatibility

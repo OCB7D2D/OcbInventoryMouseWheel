@@ -33,12 +33,14 @@ public class InventoryMouseWheel : IModApi
             {
                 switch (__result[i].Name)
                 {
+                    case "Afterlife":
                     case "Khaines60BBM":
                     case "Khaines96BBM":
                     case "Z_Ravenhearst_ResizedBackpack":
                         depPos = Mathf.Max(depPos, i + 1);
                         break;
                     case "OcbInventoryMouseWheel":
+                    case "OcbInventoryMouseWheelAL":
                     case "OcbInventoryMouseWheelSMX":
                         myPos = i;
                         break;
