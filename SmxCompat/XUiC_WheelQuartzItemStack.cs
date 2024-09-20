@@ -38,10 +38,13 @@ public class XUiC_WheelQuartzItemStack : Quartz.XUiC_ItemStack
 
     private void SetDnD(ItemStack stack) => xui.dragAndDrop.CurrentStack = stack;
 
+    static bool IsShiftPressed => Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+
     protected virtual int TransferItems(int amount,
         ItemStack src, Action<ItemStack> setSrc,
         ItemStack dst, Action<ItemStack> setDst)
     {
+        if (IsShiftPressed) amount *= 10;
         if (WheelItemStack.TransferItems(amount, src, setSrc, dst, setDst) > 0)
         {
             // Copied from vanilla
