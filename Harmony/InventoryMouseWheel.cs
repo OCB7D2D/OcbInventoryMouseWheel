@@ -1,7 +1,5 @@
 using HarmonyLib;
-using System.Collections.Generic;
 using System.Reflection;
-using UnityEngine;
 
 public class InventoryMouseWheel : IModApi
 {
@@ -11,6 +9,7 @@ public class InventoryMouseWheel : IModApi
         Log.Out("OCB Harmony Patch: " + GetType().ToString());
         Harmony harmony = new Harmony(GetType().ToString());
         harmony.PatchAll(Assembly.GetExecutingAssembly());
+        ReOrderMods();
     }
 
 
@@ -18,48 +17,39 @@ public class InventoryMouseWheel : IModApi
     // Implementation to postpone our xml patching.
     // Allows us to run after our dependencies :-)
     // ****************************************************
-
-    // Return in our load order
-    [HarmonyPatch(typeof(ModManager))]
-    [HarmonyPatch("GetLoadedMods")]
-    public class ModManager_GetLoadedMods
+    private void ReOrderMods()
     {
-        static void Postfix(ref List<Mod> __result)
+        var list = ModManager.loadedMods.list;
+        int myPos = -1, depPos = -1;
+        if (list == null) return;
+        // Find position of mods we depend on
+        for (int i = 0; i < list.Count; i += 1)
         {
-            int myPos = -1, depPos = -1;
-            if (__result == null) return;
-            // Find position of mods we depend on
-            for (int i = 0; i < __result.Count; i += 1)
+            switch (list[i].Name)
             {
-                switch (__result[i].Name)
-                {
-                    case "Afterlife":
-                    case "Khaines60BBM":
-                    case "Khaines96BBM":
-                    case "Z_Ravenhearst_ResizedBackpack":
-                        depPos = Mathf.Max(depPos, i + 1);
-                        break;
-                    case "OcbInventoryMouseWheel":
-                    case "OcbInventoryMouseWheelAL":
-                    case "OcbInventoryMouseWheelSMX":
-                        myPos = i;
-                        break;
-                }
+                case "SMXui":
+                    depPos = i + 1;
+                    break;
+                case "OcbInventoryMouseWheel":
+                case "OcbInventoryMouseWheelAL":
+                case "OcbInventoryMouseWheelSMX":
+                    myPos = i;
+                    break;
             }
-            // Didn't detect ourself?
-            if (myPos == -1)
-            {
-                Log.Error("Did not detect our own Mod?");
-                return;
-            }
-            // Detected no dependencies?
-            if (depPos == -1) return;
-            // Move our mod after deps
-            var item = __result[myPos];
-            __result.RemoveAt(myPos);
-            if (depPos > myPos) depPos--;
-            __result.Insert(depPos, item);
         }
+        // Didn't detect ourself?
+        if (myPos == -1)
+        {
+            Log.Error("Did not detect our own Mod?");
+            return;
+        }
+        // Detected no dependencies?
+        if (depPos == -1) return;
+        // Move our mod after deps
+        var item = list[myPos];
+        list.RemoveAt(myPos);
+        if (depPos > myPos) depPos--;
+        list.Insert(depPos, item);
     }
 
 }
