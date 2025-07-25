@@ -32,7 +32,7 @@ powershell -Command "(gc -encoding UTF8 build\%NAME%\ModInfo.xml) -replace '\"Oc
 
 cd build
 echo Packaging %NAME%-%VERSION%.zip
-powershell Compress-Archive %NAME% %NAME%-%VERSION%.zip -Force
+powershell Compress-Archive %NAME% %NAME%-%VERSION%-V2.0.zip -Force
 cd ..
 
 SET RV=%ERRORLEVEL%
