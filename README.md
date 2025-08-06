@@ -1,4 +1,4 @@
-# OCB Inventory Mouse Wheel Mod - 7 Days to Die (V2.0) Addon
+# OCB Inventory Mouse Wheel Mod - 7 Days to Die (V2.1) Addon
 
 A small harmony mod to enable mouse scroll wheel to move inventory items.
 
